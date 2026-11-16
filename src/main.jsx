@@ -84,7 +84,7 @@ function Hero() {
     <div className="hero-visual" onMouseMove={movePhoto} onMouseLeave={resetPhoto}>
       <div className="visual-grid" aria-hidden="true" />
       <div className="portrait-frame" ref={photo}>
-        <img src="/melvin-justol.png" alt="Portrait of Melvin Ken Justol" className="portrait-img" />
+        <img src={`${import.meta.env.BASE_URL}melvin-justol.png`} alt="Portrait of Melvin Ken Justol" className="portrait-img" />
         <div className="portrait-fallback"><span>MK</span><small>YOUR NEXT<br />TEAMMATE</small></div>
       </div>
       <div className="image-index">FIG. 01 <span>·</span> MELVIN KEN JUSTOL</div>
@@ -144,7 +144,7 @@ function Contact() {
     const form = new FormData(formElement)
     setStatus('sending')
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(`${import.meta.env.BASE_URL}api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: form.get('name'), email: form.get('email'), message: form.get('message') }),
