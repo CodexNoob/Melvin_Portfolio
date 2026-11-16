@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-The contact form posts to the Node server, which sends submissions through Resend. Keep `RESEND_API_KEY` in `.env.local`; it is server-only and `.env.local` is ignored by Git. Set `RESEND_FROM_EMAIL` to an address on a domain verified in Resend before using the form in production. `CONTACT_TO_EMAIL` is the destination inbox.
+The contact form posts to a server endpoint, which sends submissions through Resend. Local development uses the Node server; production on Vercel uses `api/contact.js`. Set `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `CONTACT_TO_EMAIL` in Vercel's Production environment variables, then redeploy. Use a sender address on a domain verified in Resend. For local development, put the same variables in `.env.local`; it is server-only and ignored by Git.
 
 ## Production build
 
