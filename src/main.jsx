@@ -53,7 +53,7 @@ function Header() {
   const [open, setOpen] = useState(false)
   const links = [['About', '#about'], ['Experience', '#experience'], ['Skills', '#skills'], ['Education', '#education']]
   return <header className="topbar wrap">
-    <a className="wordmark" href="#home" aria-label="Melvin Justol home">M<span>.</span>K<span className="wordmark-slash">/</span></a>
+    <a className="wordmark" href="#home" aria-label="Melvin Justol home">M<span>.</span>K</a>
     <button className="menu-toggle" aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
     <nav className={open ? 'nav-links nav-open' : 'nav-links'} aria-label="Main navigation">
       {links.map(([label, href], i) => <a key={href} href={href} onClick={() => setOpen(false)}><span>0{i + 1}</span>{label}</a>)}
@@ -79,6 +79,9 @@ function Hero() {
       <div className="hero-bottom">
         <div className="hero-person"><span className="micro-label">MEET YOUR NEXT TEAMMATE</span><h2>Melvin Ken Justol</h2><p>A thoughtful, hands-on hospitality professional who helps teams and guests feel well looked after.</p></div>
         <a className="circle-link" href="#about" aria-label="Scroll to about Melvin"><ArrowDown size={20} /></a>
+      </div>
+      <div className="hero-resume-action">
+        <a className="resume-button" href={`${import.meta.env.BASE_URL}melvin-ken-justol-resume.pdf`} target="_blank" rel="noreferrer"><span>OPEN RESUME</span><ArrowUpRight size={17} /></a>
       </div>
     </div>
     <div className="hero-visual" onMouseMove={movePhoto} onMouseLeave={resetPhoto}>
@@ -198,7 +201,7 @@ function Contact() {
 function Footer() {
   return <footer className="site-footer">
     <div className="wrap footer-main">
-      <a className="wordmark" href="#home" aria-label="Back to top">M<span>.</span>K<span className="wordmark-slash">/</span></a>
+      <a className="wordmark" href="#home" aria-label="Back to top">M<span>.</span>K</a>
       <p>Care in every detail. Service in every moment.</p>
       <a className="footer-top" href="#home">BACK TO TOP <ArrowUpRight size={15} /></a>
     </div>
