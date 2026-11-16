@@ -22,8 +22,36 @@
 /* Decorative rotations may extend beyond the viewport; keep them from widening the page. */
 html,body,#root{max-width:100%;overflow-x:clip}
 /* Monochrome theme and precise anchor targets (the navigation header is not sticky). */
-:root{color:#fff;background:#000;--bg:#000;--panel:#111;--ink:#fff;--muted:#c5c5c5;--line:#383838;--lime:#fff;--orange:#fff}
-#root{filter:grayscale(1)}
+:root{color:#000;background:#fff;--bg:#fff;--panel:#fff;--ink:#000;--muted:#222;--line:#000;--lime:#fff;--orange:#000}
+#root{background:#fff;color:#000}
+#root *{color:#000}
+#root .contact-section,#root .contact-section *{color:#fff}
+#root .experience-section,#root .education-section,#root .marquee{background:#fff}
+#root .contact-section{background:#000}
+#root .contact-section .contact-orbit{border-color:#fff}
+#root .contact-section .contact-orbit:before,#root .contact-section .contact-orbit:after{border-color:#fff}
+#root .contact-section .contact-orbit span{color:#fff}
+#root .contact-section .contact-detail{color:#fff}
+#root .contact-section .email-button{background:#fff;color:#000;border:1px solid #fff}
+#root .contact-section .email-button:hover{background:#000;color:#fff}
+#root .contact-section .email-button svg{color:currentColor}
+#root .contact-section .contact-form input,#root .contact-section .contact-form textarea{background:#fff;color:#000;border-color:#000}
+#root .contact-section .contact-form input::placeholder,#root .contact-section .contact-form textarea::placeholder{color:#000;opacity:.7}
+#root .contact-section .contact-form input:focus,#root .contact-section .contact-form textarea:focus{background:#fff;border-color:#000}
+#root .contact-section .contact-way{border-color:#fff}
+#root .contact-section .contact-details-title{color:#fff}
+#root .contact-section .contact-way small{color:#fff}
+#root .contact-section .contact-intro>p{color:#fff}
+#root .marquee-track b,#root .title-period,#root .hero-location svg,#root .job-place svg,#root .skill-chip svg,#root .job-date svg{color:#000}
+#root .hero-sticker{background:#fff;color:#000;border:1px solid #000}
+#root .portrait-img{filter:saturate(1) contrast(1.02)}
+#root .portrait-frame{box-shadow:16px 16px 0 #000}
+#root .skill-chip,#root .skill-featured{background:#fff;border-color:#000;color:#000}
+#root .skill-chip:hover{background:#000;color:#fff}
+#root .skill-chip:hover svg{color:#fff}
+#root .job-row:hover{background:#fff}
+#root .footer-top{border-color:#000}
+#root .footer-top svg{color:#000}
 html{scroll-padding-top:0}
 section[id]{scroll-margin-top:0}
 .nav-links>a{font-size:14px;font-weight:700;color:#f2f1eb}.nav-links>a>span{font-size:10px;font-weight:500;color:var(--lime);margin-right:8px}.nav-links .nav-contact{font-size:13px;font-weight:700;padding:12px 16px;border-color:#6a6e5f}.nav-links .nav-contact svg{width:16px;height:16px}
